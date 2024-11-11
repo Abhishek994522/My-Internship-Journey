@@ -1,0 +1,10 @@
+write a program to find weather a given number id divisibe by 5;
+
+program to find weather a given number is greater than, less than , equal to 7;
+
+to calculate the salary of an employee as:
+1) if the salary is greater than 5000 then display the salary as it it,
+if the salary is less than 5000 then add 1000 as commission to the salary and display the salary;
+
+
+program to find the smallest of given three numbers.

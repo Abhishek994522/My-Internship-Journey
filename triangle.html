@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of triangle</title>
+    <script>
+        function cal()
+        {
+            var h1,b1,a1;
+            h1=Number(document.getElementById("H").value);
+            b1=Number(document.getElementById("B").value);
+            a1=h1*b1*0.5;
+            document.getElementById("A").value=a1;
+    }
+        
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>enter height</td>
+    <td><input type="number" name="H" id="H"></td></tr>
+    <tr><td>enter breadth</td>
+        <td><input type="number" name="B" id="B"></td></tr>
+    <tr><td>Area</td>
+    <td><input type="number" name="A" id="A"></td></tr>
+    <tr><td><input type="button" value="Calculate" onclick="cal()"></td></tr>
+    </table>
+    
+</body>
+</html>

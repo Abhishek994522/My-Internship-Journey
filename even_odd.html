@@ -1,0 +1,34 @@
+<!-- control statements = transferring one statement into another-->
+ <!-- weather a given number is even or odd-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control statements</title>
+    <script>
+        function cal()
+        {
+            var n1,d;
+            n1=Number(document.getElementById("N").value);
+            d= n1%2;
+            if(Number(d)==0)
+            document.getElementById("d").value="even";
+            else
+            document.getElementById("d").value="odd";
+        }
+
+    </script>
+ </head>
+ <body>
+    <table align="center" border="1">
+        <tr><td>enter number</td>
+    <td><input type="number" name="N" id="N"></td></tr>
+    <tr><td>given number is</td>
+    <td><input type="text" name="d" id="d"></td></tr>
+    <tr><td><input type="button" value="Calculate" onclick="cal()"></td></tr>
+    </table>
+    
+    
+ </body>
+ </html>

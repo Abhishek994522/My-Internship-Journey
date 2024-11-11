@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-image: url("salback.png");
+            align-items: center;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            font-family: Arial, sans-serif;
+           
+        }
+        #earn,#did{
+            font-size: 25px;
+            text-align: center;
+        }
+        input[type= button]{
+            padding:20px 30px
+            font-size:12;
+            border:1;
+            border-radius:20px;
+            cursor:pointer;
+            border-radius:20px;
+            color:blue;
+        }
+        #name,#ID,#days,#designation,#month,#dept,#basicsalary,#pf,#hra,#insurance,#ta,#da,#totalearning,#td,#net,#calculate,#tot{
+            background-color: skyblue;
+            border-radius: 20px;
+        }
+        .form-table{
+            margin-top: 15%;
+            margin-bottom: 0%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+
+    </style>
+    <script>
+            function calculateTotalEarning() {
+                // Get the values from the input fields and parse them as floats
+                const basicsalary = parseFloat(document.getElementById("basicsalary").value) || 0;
+                const hra = parseFloat(document.getElementById("hra").value) || 0;
+                const ta = parseFloat(document.getElementById("ta").value) || 0;
+                const da = parseFloat(document.getElementById("da").value) || 0;
+    
+                // Calculate the total earning
+                const totalEarning = basicsalary + hra + ta + da;
+    
+                // Display the total earning in the Total Earning field
+                document.getElementById("totalearning").value = totalearning.toFixed(2);
+            }
+        </script>
+
+    <body>
+        <table class="form-table" border="3" style="background-color: white;" >
+           
+            <tr>
+                <td >Employee ID</td>
+                <td><input type="text" name="ID" placeholder="Employee ID" id="ID"></td>
+                <td >Employee Name</td>
+                <td><input type="text" name="name" id="name" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td >Days Worked</td>
+                <td><input type="text" name="days" id="days" ></td>
+                <td >Designation</td>
+                <td><input type="text" name="designation" id="designation"></td>
+            </tr>
+            <tr>
+                <td >Month</td>
+                <td><input type="text" name="month" id="month"></td>
+                <td >Department</td>
+                <td><input type="text" name="dept" id="dept"></td>
+            </tr>
+            <tr>
+                <td id="earn"   colspan="2" style="color: red;">Ernings</td>
+                <td id="did"   colspan="2" style="color:red">Deductions</td>
+            </tr>
+            <tr>
+                <td >Basic Salary</td>
+                <td><input type="text" name="salary" id="basicsalary"></td>
+                <td >PF</td>
+                <td><input type="text" name="pf" id="pf"></td>
+            </tr>
+            <tr>
+                <td >HRA</td>
+                <td><input type="text" name="hra" id="hra"></td>
+                <td >Insurance</td>
+                <td><input type="text" name="insurance" id="insurance"></td>
+            </tr>
+            <tr>
+                <td>TA</td>
+                <td><input type="text" name="ta" id="ta"></td>
+            </tr>
+            <tr>
+                <td>DA</td>
+                <td><input type="text" name="da" id="da"></td>
+            </tr>
+            <tr>
+                <td>Total Earnings</td>
+                <td><input type="text" name="totalearning" id="tot"></td>
+                <td>Total Deductions</td>
+                <td><input type="text" name="td" id="td"></td>
+            </tr>
+            <tr>
+                <td>Net Salary</td>
+                <td colspan="2"><input type="text" name="net" id="net"></td>
+                <td>
+                    <input type="button" value="calculate" name="calculate" id="calculate">
+                </td>
+            </tr>
+
+
+        
+           
+        </table>
+
+</body>
+</html>

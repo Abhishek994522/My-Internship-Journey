@@ -1,0 +1,31 @@
+<!--program to Calculate the Employee salary -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather a given number is positive or negative</title>
+    <script>
+        function cal()
+        {
+            var salary,final_salary;
+            salary=Number(document.getElementById("N").value);
+            if(Number(salary)>=5000)
+            document.getElementById("R").value=final_salary = salary;
+            else
+            document.getElementById("R").value= final_salary = salary + 1000;
+        }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>Enter salary</td>
+    <td><input type="number" name="N" id="N"></td></tr>
+    <tr><td>Final salary is</td>
+    <td><input type="number" name="R" id="R"></td></tr>
+    <tr><td><input type="button" value="Calculate" onclick="cal()"></td></tr>
+    </table>
+    
+</body>
+</html>
