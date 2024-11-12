@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+    
+    <!-- javascript code starts from here-->
+
+    <script>
+        function cal()
+        {
+            var wt,emf,cn,cc,hfe,mini,total,avg;
+            emf=Number(document.getElementById("emf").value);
+            cn=Number(document.getElementById("cn").value);
+            wt=Number(document.getElementById("wt").value);
+            cc=Number(document.getElementById("cc").value);
+            hfe=Number(document.getElementById("hfe").value);
+            mini=Number(document.getElementById("mini").value);
+
+            total=(emf+cn+wt+cc+hfe+mini);
+            document.getElementById("total").value=total;
+
+            avg=(emf+cn+wt+cc+hfe+mini)/6;
+            document.getElementById("avg").value=avg;
+
+            if(emf<40 || cn<40 || wt<40 || cc<40 || hfe<40 || mini<40 )
+            {
+                document.getElementById("result").value="Fail";
+                document.getElementById("result").style.color = "red";
+            }
+            else if( emf>100 || cn>100 || wt>100 || cc>100 || hfe>100 || mini>100 ) {
+                document.getElementById("result").value="Enter valid marks";
+                document.getElementById("result").style.color = "black";
+            }
+            else {
+                document.getElementById("result").value="Pass";
+                document.getElementById("result").style.color = "green";
+            }
+                
+
+                
+            }
+        
+
+
+        
+            
+        
+    </script>
+</head>
+<body>
+    <h1 align="center">FAKE PLACEMENT PROMISES COLLEGE OF ENGINEERING</h1>
+    <table align="center" border="2">
+        <section>
+        <tr><td>Roll No</td>
+        <td><input type="text" name="rno" id="rno"></td></tr>
+        <tr><td>Name</td>
+        <td><input type="text" name="name" id="name"></td></tr>
+        <tr><td>Class</td>
+            <td>
+        <select name="select" id="select">
+            <option value="">Select Class</option>
+            <option value="3rd" id="3rd">ISE 3rd sem</option>
+            <option value="4th" id="4th">ISE 4th sem</option>
+            <option value="5th" id="5th">ISE 5th sem</option>
+            <option value="6th" id="6th" colspan="2">ISE 6th sem</option></td>
+        <td><select name="sec" id="sec">Section
+            <option value="sel" id="sel">Section</option>
+            <option value="ise" id="ise">ISE</option></td></tr>
+</select>
+    </section>
+    <tr>
+        <td colspan="5"><hr style="border: 1px solid black;"></td>
+    </tr>
+    <section><hr>
+        <tr><td colspan="1">slno</td>
+            <td colspan="1">Subjects</td>
+            <td colspan="1">Maximum</td>
+            <td colspan="1">Minimum</td>
+            <td colspan="1">Marks Obtained</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Entrepreneurship management <br> and finance</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="emf" id="emf"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Computer Networks</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="cn" id="cn"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Web Technology & J2EE</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="wt" id="wt"></td>  
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Cloud Computing</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="cc" id="cc"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Human Factors and <br>Ergonomics</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="hfe" id="hfe"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Mini Project</td>
+            <td>100</td>
+            <td>40</td>
+            <td><input type="text" name="mini" id="mini"></td>
+        </tr>
+    </section>
+    <tr><td colspan="5"><hr style="border: 1px solid black;"></td></tr>
+    <section>
+        <tr>
+            <td colspan="4">TOTAL</td>
+            <td><input type="text" name="total" id="total" onclick="cal()"></td>
+        </tr>
+    </section>
+    <section>
+        <tr>
+            <td colspan="4">Average</td>
+            <td><input type="text" name="avg" id="avg"></td>
+        </tr>
+        <tr>
+            <td colspan="4">Result</td>
+            <td><input type="text" name="result" id="result"></td>
+        </tr>
+        
+    </section>
+    </table>
+    <div align="center">
+        <input type="button" value="Calculate" onclick="cal()">
+
+    </div>
+
+    
+</body>
+</html>

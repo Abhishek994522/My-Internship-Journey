@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a given number</title>
+    <script>
+        function cal()
+        {
+            var n1,f1=1,x;
+            n1=Number(document.getElementById("n").value);
+            for(x=1;x<=n1;x++)
+            {
+                f1=Number(f1)*Number(x);
+            }
+            document.getElementById("R").value=f1;
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <input type="text" name="n" id="n" placeholder="Enter a number">
+    Factorial is <input type="text" name="R" id="R">
+    <input type="button" value="Find" onclick="cal()">
+   </center>
+</body>
+</html>

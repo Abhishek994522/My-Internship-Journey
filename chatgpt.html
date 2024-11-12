@@ -3,158 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monthly Salary Slip</title>
+    <title>Marksheet</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #0066cc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #ffffff;
         }
-        .container {
-            width: 900px;
-            background-color: #0066cc;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            position: relative;
-        }
-        .header {
+        h1 {
             text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 10px;
         }
-        .sub-header {
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-        .form-table {
-            width: 100%;
+        table {
+            margin: auto;
             border-collapse: collapse;
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
+            width: 50%;
         }
-        .form-table th, .form-table td {
-            padding: 10px;
-            text-align: left;
-            font-size: 14px;
-            color: #000000;
-        }
-        .form-table th {
-            color: #ff0000; /* Red color for Earnings and Deductions */
+        th, td {
+            padding: 8px;
             text-align: center;
-            font-weight: bold;
+            border: 1px solid #333;
         }
-        .form-table input[type="text"] {
-            width: 90%;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #cccccc;
-            box-sizing: border-box;
-        }
-        .calculate-btn {
+        .input-field {
             width: 100%;
-            padding: 10px;
-            background-color: #0066cc;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
+            text-align: center;
         }
-        .left-panel {
-            position: absolute;
-            top: 40px;
-            left: 20px;
-        }
-        .left-panel img {
-            width: 80px;
-            height: auto;
+        .center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="left-panel">
-        <img src="excel-icon.png" alt="Excel Icon">
-    </div>
-    <div class="header">Jaycotton Mill</div>
-    <div class="sub-header">Monthly Salary Slip</div>
-    <table class="form-table">
+    <h1>School Name</h1>
+    <table>
+        <!-- Personal Details -->
         <tr>
-            <td>Employee ID</td>
-            <td><input type="text"></td>
-            <td>Employee Name</td>
-            <td><input type="text"></td>
+            <td>Roll No:</td>
+            <td><input type="text" id="rollNo" class="input-field"></td>
+            <td>Name:</td>
+            <td><input type="text" id="name" class="input-field"></td>
         </tr>
         <tr>
-            <td>Days Worked</td>
-            <td><input type="text"></td>
-            <td>Designation</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Month</td>
-            <td><input type="text"></td>
-            <td>Department</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <th colspan="2">Earnings</th>
-            <th colspan="2">Deductions</th>
-        </tr>
-        <tr>
-            <td>Basic Salary</td>
-            <td><input type="text"></td>
-            <td>PF</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>HRA</td>
-            <td><input type="text"></td>
-            <td>Insurance</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>TA</td>
-            <td><input type="text"></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>DA</td>
-            <td><input type="text"></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Total Earning</td>
-            <td><input type="text" readonly></td>
-            <td>Total Deductions</td>
-            <td><input type="text" readonly></td>
-        </tr>
-        <tr>
-            <td>Net Salary</td>
-            <td colspan="3"><input type="text" readonly></td>
-        </tr>
-        <tr>
-            <td colspan="4" style="text-align: center;">
-                <button class="calculate-btn">Calculate</button>
-            </td>
+            <td>Class:</td>
+            <td><input type="text" id="class" class="input-field"></td>
+            <td>Section:</td>
+            <td><input type="text" id="section" class="input-field"></td>
         </tr>
     </table>
-</div>
 
+    <br>
+
+    <table>
+        <!-- Subjects Marks -->
+        <tr>
+            <th>Sl No</th>
+            <th>Subjects</th>
+            <th>Max Marks</th>
+            <th>Min Marks</th>
+            <th>Marks Obtained</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>English</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks1" class="input-field"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Hindi</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks2" class="input-field"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Kannada</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks3" class="input-field"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Maths</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks4" class="input-field"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Science</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks5" class="input-field"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Social Studies</td>
+            <td>100</td>
+            <td>35</td>
+            <td><input type="number" id="marks6" class="input-field"></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center">Total</td>
+            <td><input type="text" id="total" class="input-field" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center">Average</td>
+            <td><input type="text" id="average" class="input-field" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="center">Result</td>
+            <td><input type="text" id="result" class="input-field" readonly></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div class="center">
+        <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <script>
+        function calculate() {
+            // Maximum and Minimum marks for each subject
+            const maxMarks = 100;
+            const minMarks = 35;
+            const subjectsCount = 6;
+
+            // Getting marks obtained from input fields
+            let marks = [];
+            for (let i = 1; i <= subjectsCount; i++) {
+                marks.push(Number(document.getElementById("marks" + i).value) || 0);
+            }
+
+            // Calculate total marks
+            let total = marks.reduce((acc, mark) => acc + mark, 0);
+            document.getElementById("total").value = total;
+
+            // Calculate average marks
+            let average = total / subjectsCount;
+            document.getElementById("average").value = average.toFixed(2);
+
+            // Determine result
+            let passedAllSubjects = marks.every(mark => mark >= minMarks);
+            document.getElementById("result").value = passedAllSubjects ? "Pass" : "Fail";
+        }
+    </script>
 </body>
 </html>

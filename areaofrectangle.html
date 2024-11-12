@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic operations using switch statement</title>
+    <script>
+        function cal()
+        {
+            var l1,w1,a1,chioce1;
+            l1=Number(document.getElementById("A").value);
+            w1=Number(document.getElementById("B").value);
+            chioce1=Number(document.getElementById("choice").value);
+            switch(chioce1)
+            {
+                case 1:"area of rectangle:"+ (a1=l1*w1);
+                     break;
+                case 2: "perimeter of rectangle:"+(a1=(l1+w1)*2);
+                     break;
+                
+            }
+            document.getElementById("C").value=a1;
+
+
+        }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>Enter length</td>
+        <td><input type="number" name="A" id="A"></td></tr>
+        <tr><td>Enter width</td>
+        <td><input type="number" name="B" id="B"></td></tr>
+        <tr><td>Result</td>
+        <td><input type="text" name="C" id="C"></td></tr>
+
+        <tr><td>Enter your choice</td>
+        <td><input type="number" name="choice" id="choice"></td></tr>
+
+        <tr><td><input type="button" value="calculate" onclick="cal()"></td></tr>
+
+
+    </table>
+</body>
+</html>

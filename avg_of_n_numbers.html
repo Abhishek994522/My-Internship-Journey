@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>average of n given number</title>
+    <script>
+        function cal()
+        {
+            var n1,f1=0,x,a;
+            n1=Number(document.getElementById("n").value);
+            for(x=1;x<=n1;x++)
+            {
+                f1=Number(f1)+Number(x);
+            }
+            a=Number(f1)/n1;
+            document.getElementById("R").value=a;
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <input type="text" name="n" id="n" placeholder="Enter a number">
+    average  is <input type="text" name="R" id="R">
+    <input type="button" value="Find" onclick="cal()">
+   </center>
+</body>
+</html>

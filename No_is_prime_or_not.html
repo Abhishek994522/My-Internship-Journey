@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find whether a given number is prime or not</title>
+    <script>
+        function cal()
+        {
+            var n1,d,flag=0,x;
+            n1=Number(document.getElementById("n").value);
+            for(x=2;x<n1;x++)
+            {
+                d=Number(n1) % Number(x);
+                if(Number(d)==0)
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(Number(flag)==1)
+            document.getElementById("R").value="Not prime";
+            else
+            document.getElementById("R").value="prime";
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <input type="text" name="n" id="n" placeholder="Enter a number">
+    number  is <input type="text" name="R" id="R">
+    <input type="button" value="Find" onclick="cal()">
+   </center>
+</body>
+</html>

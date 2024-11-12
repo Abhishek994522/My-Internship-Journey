@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic operations using switch statement</title>
+    <script>
+        function cal()
+        {
+            var a1,b1,c1,chioce1;
+            a1=Number(document.getElementById("A").value);
+            b1=Number(document.getElementById("B").value);
+            chioce1=Number(document.getElementById("choice").value);
+            switch(chioce1)
+            {
+                case 1: c1=a1+b1;
+                     break;
+                case 2: c1=a1-b1;
+                     break;
+                case 3: c1=a1*b1;
+                     break;   
+                case 4: c1=a1/b1;
+                     break;  
+            }
+            document.getElementById("C").value=c1;
+
+
+        }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>Enter first number</td>
+        <td><input type="number" name="A" id="A"></td></tr>
+        <tr><td>Enter second number</td>
+        <td><input type="number" name="B" id="B"></td></tr>
+        <tr><td>Result</td>
+        <td><input type="text" name="C" id="C"></td></tr>
+
+        <tr><td>Enter your choice</td>
+        <td><input type="text" name="choice" id="choice"></td></tr>
+
+        <tr><td><input type="button" value="calculate" onclick="cal()"></td></tr>
+
+
+    </table>
+</body>
+</html>
