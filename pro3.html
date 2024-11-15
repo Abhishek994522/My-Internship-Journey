@@ -1,0 +1,33 @@
+<!-- WAP to create array by fruits , display the name of the fruits based on their positions -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <script>
+        function find()
+        {
+            var x;
+            
+            var fruits=new Array("banana","apple","orange","mango","pineapple");
+            x=document.getElementById("n").value;
+            
+                document.getElementById("R").value=fruits[x];
+            
+        }
+    </script>
+ </head>
+ <body>
+    <table>
+        <tr><td>enter the position</td>
+            <td><input type="text" name="n" id="n"></td></tr>
+            <tr>
+                <td>Fruit</td>
+                <td><input type="text" name="R" id="R"></td></tr>
+                <tr>
+        <td><input type="button" value="find" onclick="find()"></td></tr>
+    </table>
+    
+ </body>
+ </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="text"]{
+            
+        }
+    </style>
+    <script>
+        function find()
+        {
+            var x,flag=0,p;
+            x=Number(document.getElementById("n1").value);
+        var rno=new Array(1,2,3,4,5);
+        var m=new Array(50,60,70,80,90);
+        for(i=0;i<5;i++)
+        {
+            if(Number(x)==Number(rno[i]))
+            {
+                document.getElementById("R").value=m[i];
+                break;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td><input type="text" name="n1" id="n1" placeholder="Enter a number"></td><tr>
+        <tr><td><input type="text" name="R" id="R" placeholder="marks is is "></td><tr>
+        <tr><td><input type="button" value="Find" onclick="find()"></td><tr>
+        </table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function find()
+        {
+        var i;
+        var x,flag=0,p;
+        x=Number(document.getElementById("n1").value);
+        var n=new Array(10,20,30,40,50);
+        for(i=0;i<n.length;i++)
+        {
+            if(Number(x)==Number(n[i]))
+            p=Number(i)+1;
+            flag=1;
+        }
+        if(flag==1)
+        document.getElementById("R").value="Present at the position"+p;
+    else
+    document.getElementById("R").value="Not Present";
+        }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+    <tr><td><input type="text" name="n1" id="n1" placeholder="Enter a number"></td><tr>
+    <tr><td><input type="text" name="R" id="R" placeholder="Number is "></td><tr>
+    <tr><td><input type="button" value="Find" onclick="find()"></td><tr>
+    </table>
+</body>
+</html>

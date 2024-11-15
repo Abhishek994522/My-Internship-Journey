@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        table{
+            width: 20%;
+            max-width: 800px;
+            margin: 250px auto;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color:#f2f2f2 ;
+
+            
+        }
+        th{
+            
+                background-color:#343a40;
+                color: white;
+                padding: 10px;
+                font-size: 1.5em;
+                text-align: center;
+            
+        }
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+    <script>
+    function find()
+    {
+        var i;
+        var n;
+        n=Number(document.getElementById("R").value);
+        var pro_id=new Array(1,2,3,4,5);
+        var pro_name=new Array("mobile","laptop","desktop","PS5","ipad");
+        var pro_des=new Array("made for gamers","made for coders","made for hackers","best choice for gaming","best for music");
+        var pro_price=new Array(25000,50000,30000,60000,40000);
+        for(i=0;i<5;i++)
+        {
+            if(Number(n)==Number(pro_id[i]))
+            {
+                        document.getElementById("K").value=pro_name[i];
+                        document.getElementById("A").value=pro_des[i];
+                        document.getElementById("B").value=pro_price[i];
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <table align="center" border="1">
+        <th align="center" colspan="2">PRODUCTS</th>
+        <tr><td colspan="2">enter product id:</td><td><input type="text" name="R" id="R"></td></tr>
+            <tr><td colspan="2">product name:</td><td><input type="text" name="K" id="K"></td></tr>
+            <tr><td colspan="2">description:</td><td><input type="text" name="A" id="A"></td></tr>
+            <tr><td colspan="2">price:</td><td><input type="text" name="B" id="B"></td></tr>
+            
+            
+            
+            <tr><td colspan="5" align="center"><input type="button" value="Find" onclick="find()"></td></tr>
+    </table>
+</body>
+</html>

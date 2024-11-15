@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check whether the number is present or not</title>
+    <script>
+        function find()
+        {
+        var a=[25,56,45,68,90];
+        var x,flag=0,i;
+        x=Number(document.getElementById("n").value);
+        for(i=0;i<5;i++){
+            if(Number(x)==Number(a[i]))
+            {
+                flag=1;
+                break;
+
+            }
+        }
+    
+        if(flag==1)
+        document.getElementById("R").value="present";
+        else
+        document.getElementById("R").value="Not present";
+    }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>enter the number</td>
+        <td><input type="text" name="n" id="n"></td></tr>
+        <tr><td>Result is</td>
+        <td><input type="text" name="R" id="R"></td></tr>
+        <tr><td><input type="button" value="check" onclick="find()"></td></tr>
+    </table>
+    
+</body>
+</html>

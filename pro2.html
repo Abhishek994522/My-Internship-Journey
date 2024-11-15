@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee salary</title>
+    <script>
+        function find()
+        {
+            var x,i;
+            var emp_id=[1,2,3,4,5,6,7];
+            var emp_name=["Anish","kiran","Fasi","saif","vaibhav"];
+            var emp_sal=[10,200,30000,40000,50];
+            x=Number(document.getElementById("n").value);
+            for(i=0;i<5;i++)
+            {
+                if(Number(x)==Number(emp_id[i]))
+                {
+                document.getElementById("A").value=emp_name[i];
+                document.getElementById("B").value=emp_sal[i];
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr><td>Enter Employee ID</td>
+        <td><input type="text" name="n" id="n"></td></tr>
+        <tr><td>Employee Name</td>
+        <td><input type="text" name="A" id="A"></td></tr>
+        <tr><td>Employee Salary</td>
+        <td><input type="text" name="B" id="B"></td></tr>
+        <tr><td><input type="button" value="Calculate" onclick="find()"></td></tr>
+    </table>
+    
+</body>
+</html>
